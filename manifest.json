@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Instagram DM Only",
+  "version": "1.0.0",
+  "description": "Restricts instagram.com to Direct Messages.",
+  "permissions": ["declarativeNetRequest"],
+  "host_permissions": ["*://*.instagram.com/*"],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "fence",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.instagram.com/*"],
+      "js": ["fence.js"],
+      "css": ["fence.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

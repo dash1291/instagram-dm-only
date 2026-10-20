@@ -1,0 +1,5 @@
+a[href="/"],
+a[href^="/explore"],
+a[href^="/reels"] {
+  display: none !important;
+}

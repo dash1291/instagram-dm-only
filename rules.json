@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": { "url": "https://www.instagram.com/direct/inbox/" }
+    },
+    "condition": {
+      "regexFilter": "^https?://(www\\.)?instagram\\.com/(\\?.*)?$",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": { "url": "https://www.instagram.com/direct/inbox/" }
+    },
+    "condition": {
+      "regexFilter": "^https?://(www\\.)?instagram\\.com/(explore|reels|reel|p|tv|stories)(/|$|\\?)",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]
